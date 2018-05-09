@@ -1,0 +1,10 @@
+/.idea/workspace.xml
+/target/classes/microservice/Application.class
+/target/classes/microservice/beans/Card.class
+/target/classes/microservice/controllers/CardController.class
+/target/classes/microservice/controllers/HomeController.class
+/target/classes/microservice/repositories/CardRepository.class
+/target/classes/microservice/services/CardService.class
+/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/.idea/workspace.xml
