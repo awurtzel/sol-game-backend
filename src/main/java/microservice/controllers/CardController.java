@@ -4,14 +4,12 @@ import microservice.beans.Card;
 import microservice.services.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class CardController {
 
@@ -27,9 +25,20 @@ public class CardController {
             produces = { MediaType.APPLICATION_JSON_VALUE },
             method = RequestMethod.GET)
     public Card card() {
-        List<Integer> cardIdList = new ArrayList<>();
-        cardIdList.add(0);
+        List<Long> cardIdList = new ArrayList<>();
+        cardIdList.add(1L);
 
         return cardService.getCards(cardIdList).get(0);
+    }
+
+    @RequestMapping(
+            value = "/cardList",
+            produces = { MediaType.APPLICATION_JSON_VALUE },
+            method = RequestMethod.GET)
+    public List<Card> cardList() {
+        List<Long> cardIdList = new ArrayList<>();
+        cardIdList.add(1L);
+
+        return cardService.getCards(cardIdList);
     }
 }

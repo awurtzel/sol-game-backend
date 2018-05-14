@@ -16,7 +16,7 @@ public class CardService {
         this.cardRepository = cardRepository;
     }
 
-    public List<Card> getCards(List<Integer> cardIdList) {
+    public List<Card> getCards(List<Long> cardIdList) {
         return cardRepository.getCards(cardIdList);
     }
 }
