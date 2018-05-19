@@ -15,7 +15,12 @@ public class Card {
     private String type;
     private String faction;
 
+    protected Card() {
+
+    }
+
     public Card(String name, String type, String faction) {
+        super();
         this.name = name;
         this.type = type;
         this.faction = faction;
